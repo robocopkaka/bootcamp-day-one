@@ -13,8 +13,8 @@ describe("Phone class: Create a phone, make a call", function() {
 
     it("The phone should be called 'General' if no name is passed as a parameter", function() {
       var phone = new Phone();
-      expect(phone.name).to.equal('General');
-      expect(phone.model).to.equal('GM');
+      expect(phone.name).to.equal('Phone');
+      expect(phone.model).to.equal('Unknown Make');
     });
 
     it("The phone name and model should be a property of the phone", function() {
@@ -40,11 +40,10 @@ describe("Phone class: Create a phone, make a call", function() {
     	expect(samsung.hidden).to.equal(undefined)
     })
 
-    it("The phone call function should return the instance of the Phone class", function() {
-      var samsung  = new Phone('Samsung', 'Galaxy S7');
-      var calling = samsung.call();
-      expect(calling instanceof Phone).to.equal(true);
-      expect(typeof calling.call).to.equal(typeof (function (){}));
-    });
+    it("should be able to add a contact", function(){
+    	var samsung = new Phone("Samsung")
+    	var contact = {name: "kachi", number: "0000000"}
+    	expect(samsung.addContact(contact)).to.equal(contact)
+    })
 
   });
