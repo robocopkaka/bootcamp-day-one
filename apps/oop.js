@@ -24,6 +24,6 @@ module.exports = function Phone(name, model){
 
 	Phone.prototype.addContact = function(contact){
 		var newContact = contact;
-		return newContact;
+		return newContact; 
 	}
 }
