@@ -1,5 +1,4 @@
-"use strict";
-function Phone(name, model){
+module.exports = function Phone(name, model){
 	if(name === undefined){
 		this.name = undefined
 	}
@@ -13,4 +12,3 @@ function Phone(name, model){
 		this.model = model
 	}
 }
-module.exports = new Phone();
