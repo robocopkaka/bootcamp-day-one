@@ -1,6 +1,7 @@
 'use strict'
 var chai = require('chai')
 var expect = chai.expect
+var Phone = require('../apps/oop.js')
 
 describe("Phone class: Create a phone, make a call", function() {
 
@@ -26,7 +27,17 @@ describe("Phone class: Create a phone, make a call", function() {
 
     it("should be able to make a call", function(){
     	var samsung = new Phone("Samsung")
-    	expect(samsung.call).to.equal("Making a call")
+    	expect(samsung.call()).to.equal("Making a call")
+    })
+
+    it("should be able to send a message", function(){
+    	var samsung = new Phone("Samsung")
+    	expect(samsung.message()).to.equal("Sending a message")
+    })
+
+    it("should return undefined when trying to access a private variable", function(){
+    	var samsung = new Phone("Samsung")
+    	expect(samsung.hidden).to.equal(undefined)
     })
 
     it("The phone call function should return the instance of the Phone class", function() {
