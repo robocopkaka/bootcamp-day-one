@@ -15,6 +15,6 @@ module.exports = {
 	  else if(typeof(value) === 'function'){
 	    return value(true)
 	  }
-  }
+  } 
 
 }
